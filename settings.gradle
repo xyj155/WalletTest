@@ -1,0 +1,40 @@
+pluginManagement {
+    repositories {
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        maven { url 'https://maven.aliyun.com/repository/public' } // 可选加速
+        maven { url 'https://maven.aliyun.com/repository/google' } // 可选加速
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://repo1.maven.org/maven2/' }
+        maven {url 'https://artifact.bytedance.com/repository/pangle'}
+        maven { url 'https://developer.huawei.com/repo/' }
+        maven {url 'https://developer.hihonor.com/repo'}
+        maven { url 'https://storage.zego.im/maven' }
+
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/public' } // 可选加速
+        maven { url 'https://maven.aliyun.com/repository/google' } // 可选加速
+        maven { url 'https://repo1.maven.org/maven2/' }
+        maven { url 'https://jitpack.io' }
+        maven {url 'https://artifact.bytedance.com/repository/pangle'}
+        maven { url 'https://developer.huawei.com/repo/' }
+        maven {url 'https://developer.hihonor.com/repo'}
+        maven { url 'https://storage.zego.im/maven' }
+
+    }
+}
+rootProject.name = "WalletTest"
+include ':app'

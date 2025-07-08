@@ -1,0 +1,60 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+}
+
+android {
+    namespace 'com.fastchar.wallettest'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.fastchar.wallettest"
+        minSdk 24
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation "androidx.appcompat:appcompat:1.7.0"
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.google.android.material:material:1.9.0'
+
+    // 工具库
+    implementation 'com.blankj:utilcodex:1.31.1'
+    implementation 'com.google.code.gson:gson:2.8.9'
+
+    implementation 'com.github.lihangleo2:ShadowLayout:3.4.1'
+    implementation 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+
+    implementation 'com.github.hackware1993:MagicIndicator:1.7.0'
+
+    implementation 'com.github.lihangleo2:ShadowLayout:3.4.1'
+    implementation 'com.github.JavaNoober.BackgroundLibrary:libraryx:1.7.6'
+    implementation "io.github.cymchad:BaseRecyclerViewAdapterHelper:3.0.14"
+
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+}

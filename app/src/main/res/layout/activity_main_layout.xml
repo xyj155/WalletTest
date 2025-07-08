@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/ll_bottom_bar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:elevation="7dp"
+        android:background="@color/white"
+        android:id="@+id/ll_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/ll_bottom_wallet"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/iv_wallet"
+                android:layout_margin="4dp"
+                android:src="@drawable/selector_bottom_wallet" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:id="@+id/tv_bottom_wallet"
+                android:text="@string/bottom_wallet"
+                android:gravity="center"
+                android:textColor="@color/color_bottom_select"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/ll_bottom_defi"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:id="@+id/iv_defi"
+                android:layout_height="24dp"
+                android:layout_margin="4dp"
+                android:src="@drawable/selector_bottom_defi" />
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/tv_bottom_defi"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="@string/bottom_defi"
+                android:gravity="center"
+                android:textColor="@color/color_bottom_select"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WalletTest</string>
+    <string name="bottom_wallet">Wallet</string>
+    <string name="bottom_defi">DeFi</string>
+    <string name="home_send">Send</string>
+    <string name="home_receive">Receive</string>
+</resources>
